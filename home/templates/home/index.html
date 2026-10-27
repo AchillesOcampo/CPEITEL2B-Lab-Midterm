@@ -1,0 +1,150 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TestLab | Welcome</title>
+
+    <link rel="stylesheet" href="{% static 'home/style.css' %}">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="container nav-content">
+            <a href="{% url 'landing_page' %}" class="logo">
+                TestLab<span>.</span>
+            </a>
+
+            <nav>
+                <a href="{% url 'landing_page' %}">Home</a>
+                <a href="#about">About</a>
+                <a href="#features">Features</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+
+                <p class="eyebrow">WELCOME TO TESTLAB</p>
+
+                <h1>
+                    Build Something<br>
+                    <span>Amazing.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Welcome to TestLab, your starting point for exploring,
+                    developing, and testing web applications using Django.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#features" class="btn btn-primary">
+                        Explore Features
+                    </a>
+
+                    <a href="#about" class="btn btn-secondary">
+                        Learn More
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features section">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="eyebrow">WHAT WE OFFER</p>
+                    <h2>Everything Starts Here</h2>
+                    <p>
+                        A simple foundation for building your next web project.
+                    </p>
+                </div>
+
+                <div class="feature-grid">
+
+                    <article class="feature-card">
+                        <div class="feature-icon">01</div>
+                        <h3>Easy Development</h3>
+                        <p>
+                            Start building dynamic web applications with
+                            Django's powerful development tools.
+                        </p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon">02</div>
+                        <h3>Responsive Design</h3>
+                        <p>
+                            Create a user-friendly interface that adapts
+                            to desktop, tablet, and mobile screens.
+                        </p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon">03</div>
+                        <h3>Ready to Expand</h3>
+                        <p>
+                            Extend your project with additional apps,
+                            database models, forms, and features.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section">
+            <div class="container about-content">
+
+                <div>
+                    <p class="eyebrow">ABOUT TESTLAB</p>
+                    <h2>A Simple Start to Your Django Journey</h2>
+                </div>
+
+                <div>
+                    <p>
+                        TestLab is a Django-based web project designed
+                        to serve as a foundation for future development.
+                        Begin with a simple homepage, then add the
+                        functionality your application needs.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+            <div class="container">
+                <h2>Ready to Get Started?</h2>
+                <p>
+                    Start developing your next great idea with TestLab.
+                </p>
+
+                <a href="#features" class="btn btn-light">
+                    Get Started
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; {% now "Y" %} TestLab. All rights reserved.</p>
+            <p>Built with Django.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
